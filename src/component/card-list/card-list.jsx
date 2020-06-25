@@ -11,7 +11,7 @@ export const CardList = ({monster}) => {
     		(key<3)?
     		<Card key={key} status={monster[index].value}  index={index} />:
     		(index==='lastUpdate')?
-    		<Card key={key} status={monster[index].slice(0,10)}  index={index} />:''
+    		<Card key={key} status={monster[index].slice(0,10)}  index={index} />:null
     		))
     } 
     

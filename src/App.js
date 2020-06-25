@@ -11,7 +11,8 @@ class App extends React.Component{
     this.state={
       monster:{},
       searchfield:'',
-      data:[]
+      data:[],
+      deaths:[]
     }
   }
   componentDidMount(){
@@ -21,8 +22,11 @@ class App extends React.Component{
     .catch(err=>console.log('There is an error',err));
 
     fetch('https://covid19.mathdro.id/api/daily').then(response=>response.json()).
-    then(data=>data.map(({ confirmed, reportDate: date }) => ({ y: confirmed.total, x:date }))).then(data=>this.setState({data:data}))
-    
+    then(data=>data.map(({ confirmed, reportDate: date }) => ({ y: confirmed.total, x:date }))).then(data=>this.setState({data:data}));
+
+    fetch('https://covid19.mathdro.id/api/daily').then(response=>response.json()).
+    then(data=>data.map(({ deaths, reportDate: date }) => ({ y: deaths.total, x:date }))).then(data=>this.setState({deaths:data}));
+  
   }
 
   handleChange = e => this.setState({ searchField: e.target.value });
@@ -38,7 +42,7 @@ class App extends React.Component{
       handleChange={this.handleChange}
       />
       <CardList monster={monster} />
-      <LineChart data={this.state.data} />
+      <LineChart data={this.state.data}  deaths={this.state.deaths}/>
       </div>
       );
   }
