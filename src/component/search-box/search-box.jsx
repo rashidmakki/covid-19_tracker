@@ -9,6 +9,6 @@ export const SearchBox = ({ placeholder, handleChange ,countryName}) => (
 	<input type="text" placeholder={placeholder} onChange={handleChange} />
 	<i aria-hidden="true" class="search circular inverted link icon"></i>
 	</div>
-	<h1 className="h1 countryName"> {!(countryName==='')?countryName:'Global'}</h1>
+	<h1 className="h1 countryName"> {!(countryName==='')?countryName.toUpperCase():'Global'}</h1>
 	</div>
 	);
