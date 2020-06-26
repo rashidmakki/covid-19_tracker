@@ -8,10 +8,10 @@ import './chart.css';
 // you'll often use just a few of them.
 
     
-const LineChart = ({ data,deaths/* see data tab */ }) => (
+const LineChart = ({ confirmedCases,deaths/* see data tab */ }) => (
 	<div className='linechart'>
     <ResponsiveLine
-        data={[{"id":'Total Case',data:data},
+        data={[{"id":'Total Cases',data:confirmedCases},
         {"id":'Total Deaths',data:deaths}]}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ format:"%Y-%m-%d",precision:"day",type:"time",useUTC:true}}

@@ -5,13 +5,14 @@ import LineChart from './component/chart/chart';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
+let searchField='';
+
 class App extends React.Component{
   constructor(){
     super();
     this.state={
       monster:{},
-      searchfield:'',
-      data:[],
+      confirmedCases:[],
       deaths:[]
     }
   }
@@ -22,27 +23,37 @@ class App extends React.Component{
     .catch(err=>console.log('There is an error',err));
 
     fetch('https://covid19.mathdro.id/api/daily').then(response=>response.json()).
-    then(data=>data.map(({ confirmed, reportDate: date }) => ({ y: confirmed.total, x:date }))).then(data=>this.setState({data:data}));
+    then(data=>data.map(({ confirmed, reportDate: date }) => ({ y: confirmed.total, x:date }))).then(data=>this.setState({confirmedCases:data}));
 
     fetch('https://covid19.mathdro.id/api/daily').then(response=>response.json()).
     then(data=>data.map(({ deaths, reportDate: date }) => ({ y: deaths.total, x:date }))).then(data=>this.setState({deaths:data}));
   
   }
 
-  handleChange = e => this.setState({ searchField: e.target.value });
-
+  handleChange =(e)=>{
+    searchField=e.target.value;
+    return(
+      (!(searchField===''))?
+      fetch(`https://covid19.mathdro.id/api/countries/${searchField.toLowerCase()}`).then(response=>response.json()).then(data=>this.setState({monster:data})).catch(err=>console.log('There is an error',err))
+      : fetch('https://covid19.mathdro.id/api')
+      .then(response => response.json())
+      .then(data=> this.setState({monster:data}))
+      .catch(err=>console.log('There is an error',err))
+      );
+  }
   
   render(){
-    const { monster, searchField } = this.state;
+    const { monster,confirmedCases,deaths } = this.state;
     
     return (
       <div className="App">
       <SearchBox
       placeholder="search country name"
       handleChange={this.handleChange}
+      countryName={searchField}
       />
       <CardList monster={monster} />
-      <LineChart data={this.state.data}  deaths={this.state.deaths}/>
+      <LineChart confirmedCases={confirmedCases}  deaths={deaths}/>
       </div>
       );
   }
