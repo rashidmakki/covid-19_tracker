@@ -16,7 +16,7 @@ const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
-        colors={{ scheme: 'nivo' }}
+        colors={{ scheme: 'category10' }}
         borderWidth={1}
         borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
         radialLabelsSkipAngle={10}
@@ -24,7 +24,7 @@ const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
         radialLabelsTextColor="#333333"
         radialLabelsLinkOffset={0}
         radialLabelsLinkDiagonalLength={16}
-        radialLabelsLinkHorizontalLength={24}
+        radialLabelsLinkHorizontalLength={36}
         radialLabelsLinkStrokeWidth={1}
         radialLabelsLinkColor={{ from: 'color' }}
         slicesLabelsSkipAngle={10}
@@ -46,7 +46,7 @@ const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
                 id: 'lines',
                 type: 'patternLines',
                 background: 'inherit',
-                color: 'rgba(255, 255, 255, 0.3)',
+                color: 'rgba(135, 000, 063, 0.3)',
                 rotation: -45,
                 lineWidth: 6,
                 spacing: 10
@@ -55,51 +55,15 @@ const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
         fill={[
             {
                 match: {
-                    id: 'ruby'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'c'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'go'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'python'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'scala'
+                    id: 'confirmed'
                 },
                 id: 'lines'
             },
             {
                 match: {
-                    id: 'lisp'
+                    id: 'recovered'
                 },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'elixir'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'javascript'
-                },
-                id: 'lines'
+                id: 'dots'
             }
         ]}
         legends={[

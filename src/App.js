@@ -21,7 +21,12 @@ class App extends React.Component{
     }
   }
   componentDidMount(){
-
+    
+    fetch('https://covid19.mathdro.id/api')
+     .then(response => response.json())
+     .then(data=> this.setState({monster:data}))
+     .catch(err=>console.log('There is an error',err))
+     
     fetch('https://covid19.mathdro.id/api/daily').then(response=>response.json()).
     then(data=>data.map(({ confirmed, reportDate: date }) => ({ y: confirmed.total, x:date }))).then(data=>this.setState({confirmedCases:data}));
 
@@ -29,20 +34,17 @@ class App extends React.Component{
     then(data=>data.map(({ deaths, reportDate: date }) => ({ y: deaths.total, x:date }))).then(data=>this.setState({deaths:data}));
 
   }
-  componentDidUpdate(){
-    if(searchField===''){
-     fetch('https://covid19.mathdro.id/api')
-     .then(response => response.json())
-     .then(data=> this.setState({monster:data}))
-     .catch(err=>console.log('There is an error',err))
-
-   }
- }
+  
 
  handleChange =(e)=>{
   searchField=e.target.value;
   return(
-    fetch(`https://covid19.mathdro.id/api/countries/${searchField.toLowerCase()}`).then(response=>response.json()).then(data=>this.setState({confirmed:data.confirmed.value,recovered:data.recovered.value,deathspie:data.deaths.value})).catch(err=>console.log('There is an error',err))
+    (!(searchField===''))?
+    fetch(`https://covid19.mathdro.id/api/countries/${searchField.toLowerCase()}`).then(response=>response.json()).then(data=>this.setState({confirmed:data.confirmed.value,recovered:data.recovered.value,deathspie:data.deaths.value,monster:data})).catch(err=>console.log('There is an error',err))
+    :  (fetch('https://covid19.mathdro.id/api')
+     .then(response => response.json())
+     .then(data=> this.setState({monster:data}))
+     .catch(err=>console.log('There is an error',err)))
     );
 }
 
@@ -56,14 +58,16 @@ render(){
     handleChange={this.handleChange}
     countryName={searchField}
     />
-    
-    {
+     <CardList monster={monster} />
+     {
       (!(searchField===''))?
+      <div>
       <PieChart confirmed={confirmed} recovered={recovered} deathspie={deathspie} />
-      :<div>
-      <CardList monster={monster} />
-      <LineChart confirmedCases={confirmedCases}  deaths={deaths}/>
       </div>
+      :(
+        <div>
+        <LineChart confirmedCases={confirmedCases}  deaths={deaths}/>
+        </div>)
     }
     </div>
     );
