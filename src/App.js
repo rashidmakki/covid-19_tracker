@@ -44,7 +44,7 @@ class App extends React.Component{
     return(
       (!(searchField===''))? (
       fetch(`https://covid19.mathdro.id/api/countries/${searchField.toUpperCase()}`).then(response=>response.json()).then(data=>this.setState({confirmed:data.confirmed.value,recovered:data.recovered.value,deathspie:data.deaths.value,monster:data})).catch(err=>console.log('There is an error',err)),
-      fetch(`https://covid19.mathdro.id/api/countries/${searchField.toUpperCase()}/confirmed`).then(response=>response.json()).then(data=>data.map(({provinceState,active,confirmed,deaths})=>({country:provinceState,active,confirmed,deaths}))).then(data=>this.setState({countryrecords:data})).catch(err=>console.log('There is an error',err))
+      fetch(`https://covid19.mathdro.id/api/countries/${searchField.toUpperCase()}/confirmed`).then(response=>response.json()).then(data=>data.map(({provinceState,active,confirmed,deaths,recovered})=>({country:provinceState,active,confirmed,deaths,recovered}))).then(data=>this.setState({countryrecords:data})).catch(err=>console.log('There is an error',err))
       ) : (fetch('https://covid19.mathdro.id/api')
        .then(response => response.json())
        .then(data=> this.setState({monster:data}))

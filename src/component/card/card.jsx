@@ -7,9 +7,9 @@ export const Card=({status,index})=>{
        
       <a className="ui card" href="#card-example-link-card">
       <div className="content">
-      <div className="ui mini purple statistic">
-      <div className="label">{index.toUpperCase()}</div>
+      <div className="ui tiny pink statistic">
       <div className="value">{status}</div>
+      <div className="label">{index.toUpperCase()}</div>
       </div>
       </div>
       </a>

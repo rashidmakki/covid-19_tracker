@@ -10,12 +10,14 @@ const BarChart = ({ countryrecords/* see data tab */ }) => (
     <div className='bar-chart'>
     <ResponsiveBar
     data={countryrecords}
-    keys={[ 'confirmed', 'deaths', 'active' ]}
+    keys={[ 'confirmed', 'deaths', 'active' ,'recovered']}
     indexBy="country"
-    margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+    margin={{ top: 30, right: 130, bottom: 50, left: 130 }}
     padding={0.2}
     layout="horizontal"
     colors={{ scheme: 'category10' }}
+    enableGridX={true}
+    enableGridY={false}
     defs={[
         {
             id: 'dots',
