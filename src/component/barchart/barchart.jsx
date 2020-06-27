@@ -56,17 +56,17 @@ const BarChart = ({ countryrecords/* see data tab */ }) => (
             axisTop={null}
             axisRight={null}
             axisBottom={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
+                tickSize: 8,
+                tickPadding: 6,
+                tickRotation: 44,
                 legend: 'Cases',
                 legendPosition: 'middle',
-                legendOffset: 32
+                legendOffset: 47
             }}
             axisLeft={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
+                tickSize: 7,
+                tickPadding: 6,
+                tickRotation:-35,
                 legend: '',
                 legendPosition: 'middle',
                 legendOffset: -40

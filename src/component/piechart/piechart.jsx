@@ -22,9 +22,9 @@ const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
         radialLabelsSkipAngle={10}
         radialLabelsTextXOffset={6}
         radialLabelsTextColor="#333333"
-        radialLabelsLinkOffset={0}
-        radialLabelsLinkDiagonalLength={16}
-        radialLabelsLinkHorizontalLength={36}
+        radialLabelsLinkOffset={-15}
+        radialLabelsLinkDiagonalLength={9}
+        radialLabelsLinkHorizontalLength={23}
         radialLabelsLinkStrokeWidth={1}
         radialLabelsLinkColor={{ from: 'color' }}
         slicesLabelsSkipAngle={10}
