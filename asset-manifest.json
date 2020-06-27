@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/git@github.com:rashidmakki/covid-19_tracker.git/static/css/main.5ebda190.chunk.css",
-    "main.js": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/main.843b8d48.chunk.js",
-    "main.js.map": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/main.843b8d48.chunk.js.map",
-    "runtime-main.js": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/runtime-main.cafc72ba.js",
-    "runtime-main.js.map": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/runtime-main.cafc72ba.js.map",
-    "static/css/2.6e6e6c9f.chunk.css": "/git@github.com:rashidmakki/covid-19_tracker.git/static/css/2.6e6e6c9f.chunk.css",
-    "static/js/2.724722a5.chunk.js": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/2.724722a5.chunk.js",
-    "static/js/2.724722a5.chunk.js.map": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/2.724722a5.chunk.js.map",
-    "index.html": "/git@github.com:rashidmakki/covid-19_tracker.git/index.html",
-    "precache-manifest.73571c9b456bd576fa5f53ac9102ef9e.js": "/git@github.com:rashidmakki/covid-19_tracker.git/precache-manifest.73571c9b456bd576fa5f53ac9102ef9e.js",
-    "service-worker.js": "/git@github.com:rashidmakki/covid-19_tracker.git/service-worker.js",
-    "static/css/2.6e6e6c9f.chunk.css.map": "/git@github.com:rashidmakki/covid-19_tracker.git/static/css/2.6e6e6c9f.chunk.css.map",
-    "static/css/main.5ebda190.chunk.css.map": "/git@github.com:rashidmakki/covid-19_tracker.git/static/css/main.5ebda190.chunk.css.map",
-    "static/js/2.724722a5.chunk.js.LICENSE.txt": "/git@github.com:rashidmakki/covid-19_tracker.git/static/js/2.724722a5.chunk.js.LICENSE.txt",
-    "static/media/semantic.min.css": "/git@github.com:rashidmakki/covid-19_tracker.git/static/media/outline-icons.ef60a4f6.woff"
+    "main.css": "/git@github.com:rashidmakki/covid-19_tracker/static/css/main.5ebda190.chunk.css",
+    "main.js": "/git@github.com:rashidmakki/covid-19_tracker/static/js/main.52e64dac.chunk.js",
+    "main.js.map": "/git@github.com:rashidmakki/covid-19_tracker/static/js/main.52e64dac.chunk.js.map",
+    "runtime-main.js": "/git@github.com:rashidmakki/covid-19_tracker/static/js/runtime-main.49649298.js",
+    "runtime-main.js.map": "/git@github.com:rashidmakki/covid-19_tracker/static/js/runtime-main.49649298.js.map",
+    "static/css/2.a63dd20a.chunk.css": "/git@github.com:rashidmakki/covid-19_tracker/static/css/2.a63dd20a.chunk.css",
+    "static/js/2.724722a5.chunk.js": "/git@github.com:rashidmakki/covid-19_tracker/static/js/2.724722a5.chunk.js",
+    "static/js/2.724722a5.chunk.js.map": "/git@github.com:rashidmakki/covid-19_tracker/static/js/2.724722a5.chunk.js.map",
+    "index.html": "/git@github.com:rashidmakki/covid-19_tracker/index.html",
+    "precache-manifest.22e9c6fc362628756d33318f3e22c560.js": "/git@github.com:rashidmakki/covid-19_tracker/precache-manifest.22e9c6fc362628756d33318f3e22c560.js",
+    "service-worker.js": "/git@github.com:rashidmakki/covid-19_tracker/service-worker.js",
+    "static/css/2.a63dd20a.chunk.css.map": "/git@github.com:rashidmakki/covid-19_tracker/static/css/2.a63dd20a.chunk.css.map",
+    "static/css/main.5ebda190.chunk.css.map": "/git@github.com:rashidmakki/covid-19_tracker/static/css/main.5ebda190.chunk.css.map",
+    "static/js/2.724722a5.chunk.js.LICENSE.txt": "/git@github.com:rashidmakki/covid-19_tracker/static/js/2.724722a5.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/git@github.com:rashidmakki/covid-19_tracker/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.cafc72ba.js",
-    "static/css/2.6e6e6c9f.chunk.css",
+    "static/js/runtime-main.49649298.js",
+    "static/css/2.a63dd20a.chunk.css",
     "static/js/2.724722a5.chunk.js",
     "static/css/main.5ebda190.chunk.css",
-    "static/js/main.843b8d48.chunk.js"
+    "static/js/main.52e64dac.chunk.js"
   ]
 }
