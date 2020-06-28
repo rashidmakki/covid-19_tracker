@@ -71,7 +71,8 @@ const BarChart = ({ countryrecords/* see data tab */ }) => (
                 legendPosition: 'middle',
                 legendOffset: -40
             }}
-            labelSkipWidth={12}
+            enableLabe={true}
+            labelSkipWidth={24}
             labelSkipHeight={12}
             labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
             legends={[

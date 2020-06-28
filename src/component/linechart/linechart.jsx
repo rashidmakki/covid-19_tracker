@@ -24,9 +24,9 @@ const LineChart = ({ confirmedCases,deaths/* see data tab */ }) => (
             tickValues:"every 16 days",
             tickSize: 4,
             tickPadding:4,
-            tickRotation: 0,
+            tickRotation: 38,
             legend: 'Date',
-            legendOffset: -12,
+            legendOffset: 47,
             legendPosition: 'middle'
         }}
         axisLeft={{
@@ -34,7 +34,7 @@ const LineChart = ({ confirmedCases,deaths/* see data tab */ }) => (
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'linear scale',
+            legend: '',
             legendOffset: 12,
             legendPosition: 'middle'
         }}
