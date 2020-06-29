@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c9cf838-15a8-4f87-a3c6-d3785b55e15f/deploy-status)](https://app.netlify.com/sites/worldcoronatracker/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
