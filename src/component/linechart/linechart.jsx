@@ -26,7 +26,7 @@ const LineChart = ({ confirmedCases,deaths/* see data tab */ }) => (
             tickPadding:4,
             tickRotation: 38,
             legend: 'Date',
-            legendOffset: 47,
+            legendOffset: 43,
             legendPosition: 'middle'
         }}
         axisLeft={{
