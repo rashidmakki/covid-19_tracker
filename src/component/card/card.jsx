@@ -4,8 +4,7 @@ import './card.css';
 export const Card=({status,index})=>{
     return(
       <div className="card-container">
-       
-      <a className="ui card" href="#">
+      <a className="ui card" href="#card">
       <div className="content">
       <div className="ui tiny pink statistic">
       <div className="value">{status}</div>
