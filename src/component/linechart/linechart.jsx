@@ -21,7 +21,7 @@ const LineChart = ({ confirmedCases,deaths/* see data tab */ }) => (
         axisBottom={{
         	format:"%b %d",
             orient: 'bottom',
-            tickValues:"every 16 days",
+            tickValues:"every 20 days",
             tickSize: 4,
             tickPadding:4,
             tickRotation: 38,
