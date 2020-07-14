@@ -7,13 +7,13 @@ import ProvinceState from './component/provincestate/provincestate';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
-let searchField='';
+let searchfield='';
 
 class App extends React.Component{
   constructor(){
     super();
     this.state={
-     searchField:searchField
+     searchField:searchfield
     }
   }
   
@@ -40,8 +40,8 @@ class App extends React.Component{
     </div>
     :(
       <div>
-      <CountryDetails searchField={this.state.searchField} />
-      <ProvinceState searchField={this.state.searchField} />
+      <CountryDetails searchField={searchField} />
+      <ProvinceState searchField={searchField} />
       </div>
 
       )

@@ -25,7 +25,7 @@ class CardStats extends React.Component{
      fetch(`https://covid19.mathdro.id/api/countries/${this.props.searchField.toUpperCase()}`).then(response=>response.json()).then(data=>this.setState({monster:data})).catch(err=>console.log('There is an error',err))
     )
    }
-   
+
    componentDidMount(){
    	this.globaldata()
    }
