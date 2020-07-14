@@ -7,12 +7,13 @@ import ProvinceState from './component/provincestate/provincestate';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
+let searchField='';
 
 class App extends React.Component{
   constructor(){
     super();
     this.state={
-     searchField:''
+     searchField:searchField
     }
   }
   
