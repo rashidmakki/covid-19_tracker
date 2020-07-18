@@ -24,7 +24,7 @@ const LineChart = ({ confirmedCases,deaths/* see data tab */ }) => (
             tickValues:"every 20 days",
             tickSize: 4,
             tickPadding:4,
-            tickRotation: 42,
+            tickRotation: 38,
             legend: 'Date',
             legendOffset: 43,
             legendPosition: 'middle'

@@ -12,6 +12,7 @@ class CardStats extends React.Component{
    globaldata(){
    	fetch('https://covid19.mathdro.id/api')
     .then(response => response.json())
+    .then(({confirmed,recovered,deaths,lastUpdate})=>({confirmed,recovered,deaths,lastUpdate}))
     .then(data=> this.setState({monster:data}))
     .catch(err=>console.log('There is an error',err))
    }

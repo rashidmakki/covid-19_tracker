@@ -4,6 +4,7 @@ import CardStats from './component/cardstats/cardstats';
 import GlobalGraph from './component/globalgraph/globalgraph';
 import CountryDetails from './component/countrydetails/countrydetails';
 import ProvinceState from './component/provincestate/provincestate';
+import TableStats from './component/tablestats/tablestats';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
@@ -40,8 +41,9 @@ class App extends React.Component{
     </div>
     :(
       <div>
-      <CountryDetails searchField={searchField} />
-      <ProvinceState searchField={searchField} />
+      <CountryDetails searchField={this.state.searchField} />
+      <ProvinceState searchField={this.state.searchField} />
+      <TableStats searchField={this.state.searchField} />
       </div>
 
       )

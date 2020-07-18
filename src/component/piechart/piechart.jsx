@@ -9,9 +9,9 @@ import './piechart.css';
 const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
     <div className='pie-chart'>
     <ResponsivePie
-        data={[{'id':'confirmed','label':'confirmed','value':confirmed},
-               {'id':'recovered','label':'recovered','value':recovered},
-               {'id':'deaths','label':'deaths','value':deathspie}]}
+        data={[{'id':'confirmed','label':'confirmed','value':Number(confirmed)},
+               {'id':'recovered','label':'recovered','value':Number(recovered)},
+               {'id':'deaths','label':'deaths','value':Number(deathspie)}]}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
@@ -27,6 +27,8 @@ const PieChart = ({ confirmed,recovered,deathspie /* see data tab */ }) => (
         radialLabelsLinkHorizontalLength={20}
         radialLabelsLinkStrokeWidth={1}
         radialLabelsLinkColor={{ from: 'color' }}
+        radialLabel={'id'}
+        enableSlicesLabels={true}
         slicesLabelsSkipAngle={10}
         slicesLabelsTextColor="#333333"
         animate={true}
