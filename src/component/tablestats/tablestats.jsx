@@ -29,7 +29,7 @@ constructor(props){
  	const {tableData}=this.state;
  	const {searchField}=this.props;
  	const filteredTableData = tableData.filter(data =>
-      data.countryRegion.toLowerCase().includes(searchField.toLowerCase())
+      (data.countryRegion.toLowerCase()===searchField.toLowerCase())
     );
  	return(
  		<div className='table-stats'>
@@ -44,11 +44,12 @@ constructor(props){
  		</tr>
  		</thead>
  		<tbody>
- 		{
- 			filteredTableData.map(({provinceState,confirmed,active,deaths,lastUpdate},index)=>(
- 				(index===null)?<h1> No Data Present </h1>:
-            <Table key={index} provinceState={provinceState} confirmed={confirmed} active={active} deaths={deaths} lastUpdate={lastUpdate.slice(0,10)} />
+ 		{    
+ 			(filteredTableData===[])?<h1> No Data Present </h1>:
+ 			filteredTableData.map(({combinedKey,confirmed,active,deaths,lastUpdate},index)=>(
+            <Table key={index} provinceState={combinedKey} confirmed={confirmed} active={active} deaths={deaths} lastUpdate={lastUpdate.slice(0,10)} />
          ))
+
  		}
  		</tbody>
  		</table>
