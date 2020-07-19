@@ -15,3 +15,17 @@
 .countryName{
 	font-size:40px;
 }
+.image{
+    height:150px;
+    width:450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:468px) {
+.image{
+    height:150px;
+    width:70%;
+}
+}
