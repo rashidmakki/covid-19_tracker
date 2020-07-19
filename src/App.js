@@ -41,9 +41,9 @@ class App extends React.Component{
     </div>
     :(
       <div>
-      <CountryDetails searchField={this.state.searchField} />
-      <ProvinceState searchField={this.state.searchField} />
-      <TableStats searchField={this.state.searchField} />
+      <CountryDetails searchField={searchField} />
+      <ProvinceState searchField={searchField} />
+      <TableStats searchField={searchField} />
       </div>
 
       )

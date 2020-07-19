@@ -33,7 +33,7 @@ constructor(props){
     );
  	return(
  		<div className='table-stats'>
- 		<table className="ui violet inverted table">
+ 		<table className="ui celled fixed sorted black table">
  		<thead className="">
  		<tr className="">
  		<th className="">States</th>
@@ -47,7 +47,7 @@ constructor(props){
  		{    
  			(filteredTableData===[])?<h1> No Data Present </h1>:
  			filteredTableData.map(({combinedKey,confirmed,active,deaths,lastUpdate},index)=>(
-            <Table key={index} provinceState={combinedKey} confirmed={confirmed} active={active} deaths={deaths} lastUpdate={lastUpdate.slice(0,10)} />
+            <Table key={index} provinceState={combinedKey} confirmed={confirmed} active={Math.abs(active)} deaths={deaths} lastUpdate={lastUpdate.slice(0,10)} />
          ))
 
  		}
