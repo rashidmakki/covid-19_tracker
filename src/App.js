@@ -35,17 +35,14 @@ class App extends React.Component{
    <CardStats searchField={searchField} />
    
    {
-    ((searchField===''))?
-    <div>
-    <GlobalGraph />
-    </div>
-    :(
-      <div>
+    (searchField==='')?
+       <GlobalGraph />
+    :(   
+       (<div>
       <CountryDetails searchField={searchField} />
       <ProvinceState searchField={searchField} />
       <TableStats searchField={searchField} />
-      </div>
-
+      </div>)
       )
   }
   </div>

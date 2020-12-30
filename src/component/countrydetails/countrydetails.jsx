@@ -1,5 +1,6 @@
 import React from 'react';
 import PieChart from '../piechart/piechart';
+import Spinner2 from '../spinner2/spinner2';
 
 class CountryDetails extends React.Component{
 	constructor(props){
@@ -19,7 +20,13 @@ class CountryDetails extends React.Component{
 		const {confirmed,recovered,deathspie}=this.state;
 		return(
             <div className='country-Details'>
+            {
+             (confirmed===null)?(
+             	<Spinner2 />
+             	):(
              <PieChart confirmed={confirmed} recovered={recovered} deathspie={deathspie} />
+            )
+            }
             </div>
 			);
 	}
